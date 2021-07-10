@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		25E223BD2699C54E00C0106A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E223BB2699C54E00C0106A /* Main.storyboard */; };
 		25E223BF2699C54F00C0106A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E223BE2699C54F00C0106A /* Assets.xcassets */; };
 		25E223C22699C54F00C0106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E223C02699C54F00C0106A /* LaunchScreen.storyboard */; };
+		25E9E1672699D77800742388 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E9E1662699D77800742388 /* LoginViewController.swift */; };
+		B0668BB42EC9AF78457FF562 /* Pods_Club_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D423888A879DCE3C2A1E87 /* Pods_Club_Chat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05322B0786A11FCBBADA942C /* Pods-Club Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Club Chat.release.xcconfig"; path = "Target Support Files/Pods-Club Chat/Pods-Club Chat.release.xcconfig"; sourceTree = "<group>"; };
+		18D423888A879DCE3C2A1E87 /* Pods_Club_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Club_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E223B22699C54E00C0106A /* Club Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Club Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E223B52699C54E00C0106A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E223B72699C54E00C0106A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		25E223BE2699C54F00C0106A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25E223C12699C54F00C0106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25E223C32699C54F00C0106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E9E1662699D77800742388 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		94A31AE88179715FA5800C83 /* Pods-Club Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Club Chat.debug.xcconfig"; path = "Target Support Files/Pods-Club Chat/Pods-Club Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0668BB42EC9AF78457FF562 /* Pods_Club_Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				25E223B42699C54E00C0106A /* Club Chat */,
 				25E223B32699C54E00C0106A /* Products */,
+				F6EB7123C06B155A3838EBB3 /* Pods */,
+				CF41A05A8A55C2BE1DF751C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,26 @@
 				25E223BE2699C54F00C0106A /* Assets.xcassets */,
 				25E223C02699C54F00C0106A /* LaunchScreen.storyboard */,
 				25E223C32699C54F00C0106A /* Info.plist */,
+				25E9E1662699D77800742388 /* LoginViewController.swift */,
 			);
 			path = "Club Chat";
+			sourceTree = "<group>";
+		};
+		CF41A05A8A55C2BE1DF751C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18D423888A879DCE3C2A1E87 /* Pods_Club_Chat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6EB7123C06B155A3838EBB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94A31AE88179715FA5800C83 /* Pods-Club Chat.debug.xcconfig */,
+				05322B0786A11FCBBADA942C /* Pods-Club Chat.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25E223C62699C54F00C0106A /* Build configuration list for PBXNativeTarget "Club Chat" */;
 			buildPhases = (
+				53DD6CC28062171A47F0B874 /* [CP] Check Pods Manifest.lock */,
 				25E223AE2699C54E00C0106A /* Sources */,
 				25E223AF2699C54E00C0106A /* Frameworks */,
 				25E223B02699C54E00C0106A /* Resources */,
+				0A9DBF9B0392531FC25B7268 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,11 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A9DBF9B0392531FC25B7268 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Club Chat/Pods-Club Chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Club Chat/Pods-Club Chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Club Chat/Pods-Club Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53DD6CC28062171A47F0B874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Club Chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25E223AE2699C54E00C0106A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E9E1672699D77800742388 /* LoginViewController.swift in Sources */,
 				25E223BA2699C54E00C0106A /* ViewController.swift in Sources */,
 				25E223B62699C54E00C0106A /* AppDelegate.swift in Sources */,
 				25E223B82699C54E00C0106A /* SceneDelegate.swift in Sources */,
@@ -283,6 +355,7 @@
 		};
 		25E223C72699C54F00C0106A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94A31AE88179715FA5800C83 /* Pods-Club Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +369,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.canerkaya.Club-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		25E223C82699C54F00C0106A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05322B0786A11FCBBADA942C /* Pods-Club Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.canerkaya.Club-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

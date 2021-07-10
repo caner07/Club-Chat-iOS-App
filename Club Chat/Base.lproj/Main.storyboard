@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,132 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Club_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Chat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-0N-owA" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="8" y="100" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                <color key="textColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rmD-vH-qi4">
+                                <rect key="frame" x="16" y="519" width="343" height="116"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qp-UF-gCS">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                        <color key="backgroundColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Giriş Yap">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bX0-aH-piG" kind="show" id="3sL-cF-8iW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLt-4t-ybW">
+                                        <rect key="frame" x="0.0" y="68" width="343" height="48"/>
+                                        <color key="backgroundColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Kayıt Ol!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hemen bir oda bul ve konuşmaya başla!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktm-IS-o5v">
+                                <rect key="frame" x="8" y="297.5" width="359" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jEn-0N-owA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="BCy-xc-xLd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ktm-IS-o5v" secondAttribute="trailing" constant="8" id="BGs-jX-pDd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmD-vH-qi4" secondAttribute="trailing" constant="16" id="Q0K-5r-ULr"/>
+                            <constraint firstItem="jEn-0N-owA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="U43-0e-0Kg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jEn-0N-owA" secondAttribute="trailing" constant="8" id="UqN-4e-6zr"/>
+                            <constraint firstItem="Ktm-IS-o5v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aiD-Qv-HF7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rmD-vH-qi4" secondAttribute="bottom" constant="32" id="dPO-s8-vsi"/>
+                            <constraint firstItem="Ktm-IS-o5v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dfR-qB-aJP"/>
+                            <constraint firstItem="rmD-vH-qi4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jw2-pR-2O1"/>
+                            <constraint firstItem="Ktm-IS-o5v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qae-U1-Fhn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animText" destination="jEn-0N-owA" id="hZ2-Z7-Gnv"/>
+                        <outlet property="loginButton" destination="9qp-UF-gCS" id="uM4-yT-RKf"/>
+                        <outlet property="signupButton" destination="VLt-4t-ybW" id="cBM-3S-99F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-143.47826086956522" y="81.696428571428569"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="VeH-MH-M7e">
+            <objects>
+                <viewController id="bX0-aH-piG" customClass="LoginViewController" customModule="Club_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1AR-zs-9Tt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VlM-kU-9VJ">
+                                <rect key="frame" x="16" y="230.5" width="343" height="186"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5F6-y5-KVN">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-Xj-uF5">
+                                        <rect key="frame" x="0.0" y="72" width="343" height="42"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh6-sU-I0a">
+                                        <rect key="frame" x="0.0" y="144" width="343" height="42"/>
+                                        <color key="backgroundColor" red="0.61514663700000005" green="0.72414964439999996" blue="0.97650128599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Giriş Yap">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WJV-ya-oLm"/>
+                        <color key="backgroundColor" red="0.61514663700000005" green="0.72414964439999996" blue="0.97650128599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="VlM-kU-9VJ" firstAttribute="leading" secondItem="WJV-ya-oLm" secondAttribute="leading" constant="16" id="6Rg-lQ-sh5"/>
+                            <constraint firstItem="VlM-kU-9VJ" firstAttribute="centerX" secondItem="1AR-zs-9Tt" secondAttribute="centerX" id="ELq-aJ-s6F"/>
+                            <constraint firstItem="WJV-ya-oLm" firstAttribute="trailing" secondItem="VlM-kU-9VJ" secondAttribute="trailing" constant="16" id="Fjy-eN-wL0"/>
+                            <constraint firstItem="VlM-kU-9VJ" firstAttribute="centerY" secondItem="1AR-zs-9Tt" secondAttribute="centerY" id="teD-qW-ONa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7tj-FP-Qp2"/>
+                    <connections>
+                        <outlet property="loginButton" destination="Nh6-sU-I0a" id="aov-LX-NiU"/>
+                        <outlet property="mailTextField" destination="5F6-y5-KVN" id="TPu-Ic-m2c"/>
+                        <outlet property="passwordTextField" destination="xiV-Xj-uF5" id="kL0-ZA-p0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hg-n6-bNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="81.409295352323838"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="jEn-0N-owA"/>
+    </designables>
 </document>
