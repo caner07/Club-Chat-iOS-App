@@ -42,6 +42,9 @@
                                         <state key="normal" title="Kayıt Ol!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Ui4-MQ-st5" kind="show" id="Q1c-e9-e6L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,6 +136,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Hg-n6-bNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="81.409295352323838"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="HxV-la-SiN">
+            <objects>
+                <viewController id="Ui4-MQ-st5" customClass="SignUpViewController" customModule="Club_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="29n-l7-7Yc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T4l-iY-OKT">
+                                <rect key="frame" x="16" y="230.5" width="343" height="186"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-wK-4Ti">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrW-7g-UfN">
+                                        <rect key="frame" x="0.0" y="72" width="343" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-cr-hdk">
+                                        <rect key="frame" x="0.0" y="144" width="343" height="42"/>
+                                        <color key="backgroundColor" red="0.61514663700000005" green="0.72414964439999996" blue="0.97650128599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Kayıt Ol!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpClicked:" destination="Ui4-MQ-st5" eventType="touchUpInside" id="oK7-tx-6X7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MXA-6T-fbk"/>
+                        <color key="backgroundColor" red="0.61514663700000005" green="0.72414964439999996" blue="0.97650128599999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="T4l-iY-OKT" firstAttribute="centerY" secondItem="29n-l7-7Yc" secondAttribute="centerY" id="YXj-4Q-ib6"/>
+                            <constraint firstItem="MXA-6T-fbk" firstAttribute="trailing" secondItem="T4l-iY-OKT" secondAttribute="trailing" constant="16" id="iGN-mH-vfx"/>
+                            <constraint firstItem="T4l-iY-OKT" firstAttribute="leading" secondItem="MXA-6T-fbk" secondAttribute="leading" constant="16" id="khj-pU-B7D"/>
+                            <constraint firstItem="T4l-iY-OKT" firstAttribute="centerX" secondItem="29n-l7-7Yc" secondAttribute="centerX" id="m52-77-1vt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HYT-bP-95s"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Nq4-wK-4Ti" id="gUc-du-ARy"/>
+                        <outlet property="passwordTextField" destination="zrW-7g-UfN" id="hFT-hj-OID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6m-Iy-rT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="787"/>
         </scene>
     </scenes>
     <designables>

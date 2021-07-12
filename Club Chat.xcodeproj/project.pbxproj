@@ -14,6 +14,7 @@
 		25E223BF2699C54F00C0106A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E223BE2699C54F00C0106A /* Assets.xcassets */; };
 		25E223C22699C54F00C0106A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E223C02699C54F00C0106A /* LaunchScreen.storyboard */; };
 		25E9E1672699D77800742388 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E9E1662699D77800742388 /* LoginViewController.swift */; };
+		25F07AA8269C5F73005EC49C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F07AA7269C5F73005EC49C /* SignUpViewController.swift */; };
 		B0668BB42EC9AF78457FF562 /* Pods_Club_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D423888A879DCE3C2A1E87 /* Pods_Club_Chat.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		25E223C12699C54F00C0106A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25E223C32699C54F00C0106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E9E1662699D77800742388 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		25F07AA7269C5F73005EC49C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		94A31AE88179715FA5800C83 /* Pods-Club Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Club Chat.debug.xcconfig"; path = "Target Support Files/Pods-Club Chat/Pods-Club Chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,16 +67,25 @@
 		25E223B42699C54E00C0106A /* Club Chat */ = {
 			isa = PBXGroup;
 			children = (
+				25F07AA6269C5F34005EC49C /* View */,
 				25E223B52699C54E00C0106A /* AppDelegate.swift */,
 				25E223B72699C54E00C0106A /* SceneDelegate.swift */,
-				25E223B92699C54E00C0106A /* ViewController.swift */,
 				25E223BB2699C54E00C0106A /* Main.storyboard */,
 				25E223BE2699C54F00C0106A /* Assets.xcassets */,
 				25E223C02699C54F00C0106A /* LaunchScreen.storyboard */,
 				25E223C32699C54F00C0106A /* Info.plist */,
-				25E9E1662699D77800742388 /* LoginViewController.swift */,
 			);
 			path = "Club Chat";
+			sourceTree = "<group>";
+		};
+		25F07AA6269C5F34005EC49C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25E223B92699C54E00C0106A /* ViewController.swift */,
+				25E9E1662699D77800742388 /* LoginViewController.swift */,
+				25F07AA7269C5F73005EC49C /* SignUpViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CF41A05A8A55C2BE1DF751C5 /* Frameworks */ = {
@@ -212,6 +223,7 @@
 				25E223BA2699C54E00C0106A /* ViewController.swift in Sources */,
 				25E223B62699C54E00C0106A /* AppDelegate.swift in Sources */,
 				25E223B82699C54E00C0106A /* SceneDelegate.swift in Sources */,
+				25F07AA8269C5F73005EC49C /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
