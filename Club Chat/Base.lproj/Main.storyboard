@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143.47826086956522" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-313" y="22"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="VeH-MH-M7e">
@@ -131,11 +132,12 @@
                         <outlet property="loginButton" destination="Nh6-sU-I0a" id="aov-LX-NiU"/>
                         <outlet property="mailTextField" destination="5F6-y5-KVN" id="TPu-Ic-m2c"/>
                         <outlet property="passwordTextField" destination="xiV-Xj-uF5" id="kL0-ZA-p0N"/>
+                        <segue destination="Tk6-C7-r09" kind="presentation" identifier="LoginToRooms" modalPresentationStyle="fullScreen" id="jIC-h0-mhT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Hg-n6-bNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="81.409295352323838"/>
+            <point key="canvasLocation" x="588" y="-358"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="HxV-la-SiN">
@@ -185,14 +187,121 @@
                     <connections>
                         <outlet property="emailTextField" destination="Nq4-wK-4Ti" id="gUc-du-ARy"/>
                         <outlet property="passwordTextField" destination="zrW-7g-UfN" id="hFT-hj-OID"/>
+                        <segue destination="Tk6-C7-r09" kind="presentation" identifier="SignUpToRooms" modalPresentationStyle="fullScreen" id="V9C-lJ-A8E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6m-Iy-rT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="787"/>
+            <point key="canvasLocation" x="588" y="354"/>
+        </scene>
+        <!--Sohbet Odaları-->
+        <scene sceneID="csG-5N-ZoP">
+            <objects>
+                <viewController id="D3L-GG-vcS" customClass="RoomsViewController" customModule="Club_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="THM-hM-TDi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Kt-k4-aL0">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RoomsCell" rowHeight="151" id="93w-he-1S7" customClass="RoomsTableViewCell" customModule="Club_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="375" height="151"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="93w-he-1S7" id="ogX-7G-7Nd">
+                                            <rect key="frame" x="0.0" y="0.0" width="349.5" height="151"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble.left.and.bubble.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PEP-Ep-h35">
+                                                    <rect key="frame" x="5" y="5" width="132.5" height="142"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oda İsim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-O2-8DG">
+                                                    <rect key="frame" x="137.5" y="5" width="199" height="141"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="PEP-Ep-h35" secondAttribute="bottom" constant="5" id="99f-Nk-qux"/>
+                                                <constraint firstItem="rw3-O2-8DG" firstAttribute="width" secondItem="PEP-Ep-h35" secondAttribute="width" multiplier="1.5" id="NTR-rZ-Rak"/>
+                                                <constraint firstItem="rw3-O2-8DG" firstAttribute="top" secondItem="ogX-7G-7Nd" secondAttribute="top" constant="5" id="Ufz-t0-agO"/>
+                                                <constraint firstAttribute="bottom" secondItem="rw3-O2-8DG" secondAttribute="bottom" constant="5" id="Ybj-iv-Cu5"/>
+                                                <constraint firstItem="rw3-O2-8DG" firstAttribute="height" secondItem="PEP-Ep-h35" secondAttribute="height" id="arL-15-5gR"/>
+                                                <constraint firstItem="rw3-O2-8DG" firstAttribute="leading" secondItem="PEP-Ep-h35" secondAttribute="trailing" id="fOL-ji-N03"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rw3-O2-8DG" secondAttribute="trailing" constant="5" id="lnh-y4-Ole"/>
+                                                <constraint firstItem="PEP-Ep-h35" firstAttribute="leading" secondItem="ogX-7G-7Nd" secondAttribute="leading" constant="5" id="s4H-IW-tZS"/>
+                                                <constraint firstItem="PEP-Ep-h35" firstAttribute="top" secondItem="ogX-7G-7Nd" secondAttribute="top" constant="5" id="wd7-hA-qlD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="odaIsimLabel" destination="rw3-O2-8DG" id="Jeb-q5-r1j"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VCY-Ms-MgO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Kt-k4-aL0" firstAttribute="leading" secondItem="VCY-Ms-MgO" secondAttribute="leading" id="b9t-xr-3cP"/>
+                            <constraint firstItem="4Kt-k4-aL0" firstAttribute="top" secondItem="VCY-Ms-MgO" secondAttribute="top" id="bX6-x9-Zt5"/>
+                            <constraint firstItem="VCY-Ms-MgO" firstAttribute="trailing" secondItem="4Kt-k4-aL0" secondAttribute="trailing" id="jeA-j9-IfO"/>
+                            <constraint firstItem="VCY-Ms-MgO" firstAttribute="bottom" secondItem="4Kt-k4-aL0" secondAttribute="bottom" id="lF9-Yy-GVM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sohbet Odaları" id="fw8-4q-Myo"/>
+                    <connections>
+                        <outlet property="roomsTableView" destination="4Kt-k4-aL0" id="8zQ-Pc-Huf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kU7-rG-5lf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="21"/>
+        </scene>
+        <!--Sohbet Odaları-->
+        <scene sceneID="ILG-68-pRT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tk6-C7-r09" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Sohbet Odaları" id="QdY-Yr-ih6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JRN-rw-kNH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.49148392680000003" green="0.5136473775" blue="0.96082848310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D3L-GG-vcS" kind="relationship" relationship="rootViewController" id="XRk-dQ-uem"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIe-aS-aar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="21"/>
         </scene>
     </scenes>
     <designables>
         <designable name="jEn-0N-owA"/>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="V9C-lJ-A8E"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="bubble.left.and.bubble.right" catalog="system" width="128" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
