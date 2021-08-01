@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         animText.text = "🤩Club Chat🤩"
-        loginButton.layer.cornerRadius = 25.0
-        signupButton.layer.cornerRadius = 25.0
+        loginButton.layer.cornerRadius = loginButton.frame.height / 2
+        signupButton.layer.cornerRadius = signupButton.frame.height / 2
     }
 
 

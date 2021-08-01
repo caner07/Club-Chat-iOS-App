@@ -1,15 +1,13 @@
 //
-//  RoomsTableViewCell.swift
+//  MessagesTableViewCell.swift
 //  Club Chat
 //
-//  Created by Caner on 12.07.2021.
+//  Created by Caner on 13.07.2021.
 //
 
 import UIKit
 
-class RoomsTableViewCell: UITableViewCell {
-    @IBOutlet weak var odaIsimLabel: UILabel!
-    @IBOutlet weak var lockImage: UIImageView!
+class MessagesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +16,6 @@ class RoomsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
 
         // Configure the view for the selected state
     }
