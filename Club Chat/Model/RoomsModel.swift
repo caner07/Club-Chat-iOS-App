@@ -10,4 +10,5 @@ import Foundation
 struct RoomsModel {
     let name:String?
     let password:String?
+    let date:String?
 }

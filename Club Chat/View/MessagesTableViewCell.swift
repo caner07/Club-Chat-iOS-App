@@ -6,13 +6,19 @@
 //
 
 import UIKit
-
-class MessagesTableViewCell: UITableViewCell {
+import PaddingLabel
+class MessagesTableViewCell: UITableViewCell{
+    @IBOutlet weak var messageLabel: PaddingLabel!
+    @IBOutlet weak var senderLabel: PaddingLabel!
+    @IBOutlet weak var stackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

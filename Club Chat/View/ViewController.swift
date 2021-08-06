@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         animText.text = "🤩Club Chat🤩"
         loginButton.layer.cornerRadius = loginButton.frame.height / 2
         signupButton.layer.cornerRadius = signupButton.frame.height / 2
+        
     }
 
 

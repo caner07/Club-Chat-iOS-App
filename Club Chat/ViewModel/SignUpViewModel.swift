@@ -23,8 +23,14 @@ class SignUpViewModel{
             if  error != nil {
                 self.delegate?.error()
             }else{
+                self.saveUser(userName: email, password: password)
                 self.delegate?.success()
             }
         }
+    }
+    func saveUser(userName:String,password:String){
+        let d = UserDefaults.standard
+        d.setValue(userName, forKey: "userName")
+        d.setValue(password, forKey: "password")
     }
 }

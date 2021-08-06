@@ -15,6 +15,9 @@ class RoomsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		if #available(iOS 13.0, *) {
+				overrideUserInterfaceStyle = .light
+			}
         roomsTableView.delegate = self
         roomsTableView.dataSource = self
 		viewModel.delegate = self
@@ -26,7 +29,9 @@ class RoomsViewController: UIViewController {
 				textField.placeholder = "Oda İsmi(Boş Bırakılamaz)"
 			}
 		alertController.addTextField { (textField : UITextField!) -> Void in
-			textField.placeholder = "Parola(Boş Bırakabilirsin)"}
+			textField.placeholder = "Parola(Boş Bırakabilirsin)"
+			textField.isSecureTextEntry = true
+		}
 		
 		let cancelAction = UIAlertAction(title: "Vazgeç", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
 		
@@ -35,7 +40,7 @@ class RoomsViewController: UIViewController {
 			let nameTextField = alertController.textFields![0] as UITextField
 			let passwordTextField = alertController.textFields![1] as UITextField
 			var password = ""
-			if nameTextField.text != nil {
+			if !(nameTextField.text!.isEmpty) {
 				let roomName = nameTextField.text!
 				if passwordTextField.text == "" {
 					password = "NoPassword"
@@ -53,6 +58,8 @@ class RoomsViewController: UIViewController {
 		self.present(alertController, animated: true, completion: nil)
 	}
 	@IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+		viewModel.logOut()
+		self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
 	}
 	
 	func showActivityIndicator() {
@@ -83,6 +90,35 @@ class RoomsViewController: UIViewController {
 			self.present(alert, animated: true, completion: nil)
 		}
 	}
+	func showPasswordAlert(name:String,index:Int){
+		let alertController = UIAlertController(title: "\(name) Odası İçin Şifre", message: "", preferredStyle: UIAlertController.Style.alert)
+		alertController.addTextField { (textField : UITextField!) -> Void in
+				textField.placeholder = "Şifre"
+			textField.isSecureTextEntry = true
+			}
+		
+		let cancelAction = UIAlertAction(title: "Vazgeç", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+		
+		
+		let saveAction = UIAlertAction(title: "Odaya Gir", style: UIAlertAction.Style.default, handler: { alert -> Void in
+			let passwordTextField = alertController.textFields![0] as UITextField
+			self.viewModel.checkPassword(password: passwordTextField.text!, index: index)
+			
+		})
+			
+			
+			alertController.addAction(cancelAction)
+			alertController.addAction(saveAction)
+			
+		self.present(alertController, animated: true, completion: nil)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "roomsToChat" {
+			let destination = segue.destination as! MessagesViewController
+			destination.viewModel.room = self.viewModel.selectedRoom
+		}
+	}
 }
 //MARK: - UITableViewDelegate,UITableViewDataSource
 extension RoomsViewController:UITableViewDataSource,UITableViewDelegate{
@@ -99,9 +135,15 @@ extension RoomsViewController:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 75
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		viewModel.selectedRoom = viewModel.rooms?[indexPath.row]
+		if viewModel.rooms?[indexPath.row].password == "NoPassword" {
+			performSegue(withIdentifier: "roomsToChat", sender: nil)
+		}else{
+			showPasswordAlert(name: (viewModel.rooms?[indexPath.row].name)!, index: indexPath.row)
+		}
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -119,5 +161,15 @@ extension RoomsViewController:RoomsViewModelDelegate{
 	func error() {
 		hideActivityIndicator()
 		showAlert()
+	}
+	func segueToTheChat(room: RoomsModel?) {
+		performSegue(withIdentifier: "roomsToChat", sender: nil)
+		print("şifre doru")
+	}
+	func wrongPassword() {
+		let alert = UIAlertController(title: "Hatalı Şifre!", message: "", preferredStyle: UIAlertController.Style.alert)
+		alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
+
 	}
 }

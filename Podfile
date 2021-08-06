@@ -11,6 +11,7 @@ target 'Club Chat' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift', '6.3.0'
+  pod 'PaddingLabel', '1.2'
 
 
 end

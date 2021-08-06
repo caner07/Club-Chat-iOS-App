@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         viewModel.delegate = self
+        viewModel.checkUser()
     }
     
     func setUI(){

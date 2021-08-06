@@ -331,6 +331,7 @@ PODS:
     - nanopb/encode (= 2.30907.0)
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
+  - PaddingLabel (1.2)
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
@@ -339,6 +340,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - IQKeyboardManagerSwift (= 6.3.0)
+  - PaddingLabel (= 1.2)
 
 SPEC REPOS:
   trunk:
@@ -361,6 +363,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - leveldb-library
     - nanopb
+    - PaddingLabel
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -383,8 +386,9 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  PaddingLabel: 21ab5282c780366018b04c30e3920c2f55a2fd14
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 11be4394ca1e2a1ca39f6d31d679ab8c2f7231c1
+PODFILE CHECKSUM: 3d2189c4f50f5183167a9418f591fdeec381448c
 
 COCOAPODS: 1.10.1

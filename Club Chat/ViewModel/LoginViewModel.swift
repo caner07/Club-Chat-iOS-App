@@ -17,12 +17,28 @@ class LoginViewModel{
     
     func login(userName:String,password:String){
         delegate?.loading()
-        Auth.auth().signIn(withEmail: "caner@caner.çöm", password: "123456") { authDataResult, error in
+        Auth.auth().signIn(withEmail: userName, password: password) { authDataResult, error in
             if error != nil {
                 self.delegate?.error()
             }else{
+                self.saveUser(userName: userName, password: password)
                 self.delegate?.success()
             }
         }
     }
+    func saveUser(userName:String,password:String){
+        let d = UserDefaults.standard
+        d.setValue(userName, forKey: "userName")
+        d.setValue(password, forKey: "password")
+    }
+    func checkUser(){
+        let d = UserDefaults.standard
+        let userName = d.object(forKey: "userName") ?? "noUser"
+        let password = d.object(forKey: "password") ?? "noUser"
+        if userName as! String != "noUser" && password as! String != "noUser" {
+            login(userName: userName as! String, password: password as! String)
+        }
+        
+    }
+    
 }

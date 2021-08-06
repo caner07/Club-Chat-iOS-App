@@ -10,17 +10,23 @@ import UIKit
 class MessagesViewController: UIViewController {
     @IBOutlet weak var messagesTableView: UITableView!
     @IBOutlet weak var messageLabel: UITextField!
+    let viewModel = MessagesViewModel()
     var activityView: UIActivityIndicatorView?
     var myview = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+                overrideUserInterfaceStyle = .light
+            }
         messagesTableView.dataSource = self
         messagesTableView.delegate = self
-
-        // Do any additional setup after loading the view.
+        viewModel.delegate = self
+        viewModel.loadMessages()
+        self.navigationItem.title = viewModel.room?.name
     }
     
     @IBAction func sendButtonPressed(_ sender: UIButton) {
+        viewModel.sendMessage(message: messageLabel.text!)
     }
     func showActivityIndicator() {
         DispatchQueue.main.async {
@@ -52,19 +58,60 @@ class MessagesViewController: UIViewController {
     }
     
 }
-
+//MARK: - UITABLEVIEWDATASOURCE,UITABLEVIEWDELEGATE
 extension MessagesViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return viewModel.messages?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessagesTableViewCell
+        cell.messageLabel.text = viewModel.messages?[indexPath.row].body
+        cell.messageLabel.layer.cornerRadius = cell.messageLabel.frame.size.height / 6
+        cell.messageLabel.layer.masksToBounds = true
+        //Mesajı gönderen kullanıcı ise mesaj ve gönderen sağa dayalı
+        if viewModel.whoSendThisMessage(index: indexPath.row) == "you" {
+            cell.senderLabel.text = "Siz"
+            cell.stackView.alignment = .trailing
+            cell.messageLabel.backgroundColor = #colorLiteral(red: 0.6006183624, green: 0.7878240943, blue: 0.621578753, alpha: 1)
+        }
+        //Mesajı gönderen kullanıcı ise mesaj ve gönderen sola dayalı
+        else{
+            cell.senderLabel.text = viewModel.whoSendThisMessage(index: indexPath.row)
+            cell.stackView.alignment = .leading
+            cell.messageLabel.backgroundColor = #colorLiteral(red: 0.5435213447, green: 0.7184080482, blue: 0.9403771758, alpha: 1)
+        }
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+   
+    
+    
+}
+//MARK: - VIEWMODEL DELEGATE
+extension MessagesViewController:MessagesViewModelDelegate{
+    func loading() {
+        DispatchQueue.main.async {
+            self.showActivityIndicator()
+        }
     }
     
+    func success() {
+        DispatchQueue.main.async {
+            self.hideActivityIndicator()
+            self.messageLabel.text = ""
+            self.messagesTableView.reloadData()
+            if self.viewModel.messages?.count != 0{
+                let indexPath = IndexPath(row: (self.viewModel.messages!.count-1) , section: 0)
+                self.messagesTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            }
+            
+        }
+    }
     
+    func error() {
+        DispatchQueue.main.async {
+            self.hideActivityIndicator()
+            self.showAlert()
+        }
+    }
 }
