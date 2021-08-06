@@ -10,7 +10,6 @@
 		250F1F65269D9BC500CACDA6 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F1F64269D9BC500CACDA6 /* MessagesTableViewCell.swift */; };
 		250F1F67269D9BE800CACDA6 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250F1F66269D9BE800CACDA6 /* MessagesViewController.swift */; };
 		256D966726A60DFC00CC4C8B /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D966626A60DFC00CC4C8B /* MessageModel.swift */; };
-		25A41DA326A5ED250051540E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A41DA226A5ED250051540E /* Constants.swift */; };
 		25A41DA526A5F2340051540E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25A41DA426A5F2340051540E /* GoogleService-Info.plist */; };
 		25CF970F26B7211A0019B82B /* RoomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF970E26B7211A0019B82B /* RoomsModel.swift */; };
 		25E223B62699C54E00C0106A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E223B52699C54E00C0106A /* AppDelegate.swift */; };
@@ -36,7 +35,6 @@
 		250F1F64269D9BC500CACDA6 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		250F1F66269D9BE800CACDA6 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		256D966626A60DFC00CC4C8B /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
-		25A41DA226A5ED250051540E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		25A41DA426A5F2340051540E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25CF970E26B7211A0019B82B /* RoomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsModel.swift; sourceTree = "<group>"; };
 		25E223B22699C54E00C0106A /* Club Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Club Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,14 +88,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25A41DA126A5ED100051540E /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				25A41DA226A5ED250051540E /* Constants.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		25E223A92699C54E00C0106A = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +111,6 @@
 			children = (
 				256D966526A60DE400CC4C8B /* Model */,
 				256D966426A60D8500CC4C8B /* ViewModel */,
-				25A41DA126A5ED100051540E /* Utilities */,
 				25F07AA6269C5F34005EC49C /* View */,
 				25E223B52699C54E00C0106A /* AppDelegate.swift */,
 				25E223B72699C54E00C0106A /* SceneDelegate.swift */,
@@ -287,7 +276,6 @@
 				250F1F67269D9BE800CACDA6 /* MessagesViewController.swift in Sources */,
 				25F30DB126B4976D00BED1C8 /* RoomsViewModel.swift in Sources */,
 				25E223BA2699C54E00C0106A /* ViewController.swift in Sources */,
-				25A41DA326A5ED250051540E /* Constants.swift in Sources */,
 				25E223B62699C54E00C0106A /* AppDelegate.swift in Sources */,
 				25CF970F26B7211A0019B82B /* RoomsModel.swift in Sources */,
 				25EC2DC726B963D3000E4149 /* MessagesViewModel.swift in Sources */,

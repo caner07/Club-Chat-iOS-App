@@ -23,10 +23,17 @@ class MessagesViewController: UIViewController {
         viewModel.delegate = self
         viewModel.loadMessages()
         self.navigationItem.title = viewModel.room?.name
+        self.navigationItem.backButtonTitle = "Sohbet Odaları"
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
     }
     
     @IBAction func sendButtonPressed(_ sender: UIButton) {
         viewModel.sendMessage(message: messageLabel.text!)
+    }
+    
+    @objc func hideKeyboard(){
+        view.endEditing(true)
     }
     func showActivityIndicator() {
         DispatchQueue.main.async {
@@ -73,12 +80,16 @@ extension MessagesViewController:UITableViewDataSource,UITableViewDelegate{
         if viewModel.whoSendThisMessage(index: indexPath.row) == "you" {
             cell.senderLabel.text = "Siz"
             cell.stackView.alignment = .trailing
+            cell.senderLabel.textAlignment = .right
+            cell.messageLabel.textAlignment = .right
             cell.messageLabel.backgroundColor = #colorLiteral(red: 0.6006183624, green: 0.7878240943, blue: 0.621578753, alpha: 1)
         }
         //Mesajı gönderen kullanıcı ise mesaj ve gönderen sola dayalı
         else{
             cell.senderLabel.text = viewModel.whoSendThisMessage(index: indexPath.row)
             cell.stackView.alignment = .leading
+            cell.senderLabel.textAlignment = .left
+            cell.messageLabel.textAlignment = .left
             cell.messageLabel.backgroundColor = #colorLiteral(red: 0.5435213447, green: 0.7184080482, blue: 0.9403771758, alpha: 1)
         }
         return cell

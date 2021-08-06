@@ -165,7 +165,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-cr-hdk">
                                         <rect key="frame" x="0.0" y="144" width="396" height="42"/>
@@ -280,6 +280,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sohbet Odaları" id="fw8-4q-Myo">
+                        <barButtonItem key="backBarButtonItem" title="Sohbet Odaları" id="Unk-Yx-wkI"/>
                         <barButtonItem key="leftBarButtonItem" style="done" id="mvF-ua-G7J">
                             <imageReference key="image" image="power" catalog="system" symbolScale="large"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -326,7 +327,7 @@
                                                     <rect key="frame" x="20" y="16" width="388" height="85"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Mesaj" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYH-67-aMa" customClass="PaddingLabel" customModule="PaddingLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="388" height="63.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="388" height="53.333333333333336"/>
                                                             <color key="backgroundColor" red="0.45050239559999999" green="0.458415091" blue="0.79219108819999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,7 +348,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gönderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daq-rx-lHc" customClass="PaddingLabel" customModule="PaddingLabel">
-                                                            <rect key="frame" x="0.0" y="63.333333333333321" width="388" height="21.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="53.333333333333321" width="388" height="31.666666666666664"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -478,7 +479,13 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="daq-rx-lHc">
+            <size key="intrinsicContentSize" width="95.666666666666671" height="31.666666666666668"/>
+        </designable>
         <designable name="jEn-0N-owA"/>
+        <designable name="xYH-67-aMa">
+            <size key="intrinsicContentSize" width="80.666666666666671" height="40"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="V9C-lJ-A8E"/>

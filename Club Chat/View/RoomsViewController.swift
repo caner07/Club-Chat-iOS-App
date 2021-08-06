@@ -164,7 +164,6 @@ extension RoomsViewController:RoomsViewModelDelegate{
 	}
 	func segueToTheChat(room: RoomsModel?) {
 		performSegue(withIdentifier: "roomsToChat", sender: nil)
-		print("şifre doru")
 	}
 	func wrongPassword() {
 		let alert = UIAlertController(title: "Hatalı Şifre!", message: "", preferredStyle: UIAlertController.Style.alert)
