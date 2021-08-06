@@ -11,14 +11,20 @@ Sohbet odaları herkese açık ya da şifre korumalı olabilir. Kayıt ve giriş
 
 ## Ekran Görüntüleri
 
-![Kullanıcı Karşılama Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.49_240x430.png) ### Kullanıcı Karşılama Ekranı
+### Kullanıcı Karşılama Ekranı
+![Kullanıcı Karşılama Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.49_240x430.png) 
 
-![Giriş Yapma Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.52_240x430.png) ### Giriş Yapma Ekranı
+### Giriş Yapma Ekranı
+![Giriş Yapma Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.52_240x430.png) 
 
-![Sohbet Odaları](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.19_240x430.png) ### Sohbet Odaları
+### Sohbet Odaları
+![Sohbet Odaları](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.19_240x430.png) 
 
-![Sohbet Odası Parola Koruması](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.34_240x430.png) ### Sohbet Odası Parola Koruması
+### Sohbet Odası Parola Koruması
+![Sohbet Odası Parola Koruması](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.34_240x430.png) 
 
-![Yeni Sohbet Odası Ekleme](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.40_240x430.png) ### Yeni Sohbet Odası Ekleme
+### Yeni Sohbet Odası Ekleme
+![Yeni Sohbet Odası Ekleme](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.40_240x430.png) 
 
-![Sohbet Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.14_240x430.png)  ### Sohbet Ekranı
+### Sohbet Ekranı
+![Sohbet Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.14_240x430.png)  
