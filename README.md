@@ -10,7 +10,6 @@ Sohbet odaları herkese açık ya da şifre korumalı olabilir. Kayıt ve giriş
 ### PaddingLabel -> Labellara storyboard üzerinden kodsuz padding vermek için
 
 #Ekran Görüntüleri
-![Harcamalarınızı buradan takip edebilir dilediğiniz para birimi türünden görebilirsiniz](https://raw.githubusercontent.com/caner07/HarcamaTakip/master/screenshots/Screenshot_1620488584.png)
 ![Kullanıcı Karşılama Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.49_240x430.png)
 
 ![Giriş Yapma Ekranı](https://raw.githubusercontent.com/caner07/Club-Chat-iOS-App-MVVM/main/Club%20Chat/Assets.xcassets/Simulator_Screen_Shot_-_iPhone_11_-_2021-08-06_at_11.43.52_240x430.png)
